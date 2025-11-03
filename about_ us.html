@@ -65,10 +65,7 @@
     <const position = [-34.0, 18.0];></const>
     <return> 
         <MapContainer center={position} zoom={13} style={{ height: 400px, width: 100%>
-            <TileLayer
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
+            <TileLayer>
             <Marker position={position}>
                 <Popup>
                     Botanical Building Blocks Location
@@ -76,7 +73,7 @@
             </Marker>
         </MapContainer>
         <Animatable.View animation="fadeIn" duration={1000}>
-    <Text>Your content here</Text>
+    <Text>Come visit us here</Text>
 </Animatable.View>
 
         

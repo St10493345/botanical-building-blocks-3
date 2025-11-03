@@ -38,7 +38,7 @@
             {isOpen && <View style={styles.content}>{children}</View>}
         </View>
 
-    <const [activeTab, setActiveTab] = useState(tabs[0].title);>
+    <const [activeTab, setActiveTab] >
    <return>
         <View>
             <View style={styles.tabContainer}>
@@ -75,9 +75,7 @@
     <return >
         <View style={styles.mapContainer}>
             <MapContainer center=[51.505, -0.09] zoom={13} style={styles.map}>
-                <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution='&copy; href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors'/>
+                <TileLayer>
                 <Marker position=[51.505, -0.09]/>
             </MapContainer>
             <!--Here i added  animation-->

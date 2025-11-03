@@ -77,22 +77,16 @@
         
         <View style={styles.mapContainer}>
             <MapContainer center={[51.505, -0.09] zoom={13} style={styles.map}>
-                <TileLayer
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    attribution='&copy;a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                />
+                <TileLayer>
                 <Marker position={[51.505, -0.09] />
             </MapContainer>
 
             <Animatable.View animation="fadeIn" duration={1000}>
-    <Text>Your content here</Text>
+    <Text>Shop now</Text>
 </Animatable.View>
 
         </View>
         </View>
-
-
-
         
         </header>
         <main>
