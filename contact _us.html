@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <import React, { useState } from react>
+<import { View, Text, TouchableOpacity, StyleSheet } from react-native>
+<import { View, Text, TouchableOpacity, StyleSheet } from react-native>
+<import { Modal, View, Text, Button, StyleSheet } from react-native>
+<import { View, Image, StyleSheet, TouchableOpacity } from react-native>
+<import Lightbox from react-native-lightbox-gallery>
+<import { MapContainer, TileLayer, Marker } from react-leaflet>
+<import leafletdistleaflet.css>
+    <import * as Animatable from react-native-animatable>
+    <title>Botanical building blocks contuct us page</title>
+    
+</head>
+<body>
+    <font-family:Arial,sans-serif;>
+    <font-size:16px;>
+    <margin:0;>
+    <padding:0;>
+<!-- here is a image of buildable flowers -->
+    <header>
+       
+        <h2>"Botanical building blocks"</h2>
+        <img src="_images/_logo_for_botanical_building_blocks.png" alt="botanical building blocks Logo " width="120">
+
+        <nav>
+            <ul>
+                <li><a href="index_page.html">home</a></li>
+                <li><a href="about_us.html">about_us</a></li>
+                <li><a href="donation_page.html">donation</a></li>
+                <li><a href="project_and_gallery.html">project_and_gallery</a></li>
+                <li><a href ="shop_page.html">shop</a></li>
+                <li><a href="volunteer.html">volunteer</a></li>
+                <li>contact us</li>
+            </ul>
+        </nav>
+   <const [isOpen, setIsOpen] = useState(false);>
+
+    <return>
+        <View style={styles.accordionContainer}>
+            <TouchableOpacity onPress={() > setIsOpen(!isOpen)>
+                <Text style={styles.accordionTitle}>{title}</Text>
+            </TouchableOpacity>
+            <isOpen &&>{children}</View>>
+        </View>
+    <const [activeTab, setActiveTab] = useState(tabs[0].title);>
+
+    <return>
+        <View>
+            <View style={{ flexDirection: row > 
+                    <TouchableOpacity key={tab.title} onPress={() > setActiveTab(tab.title)>
+                        <Text style={{ margin: 10, fontWeight: activeTab =tab.title ? bold >
+                        </Text>
+                    </TouchableOpacity>
+            </View>
+    <return>
+        <Modal isVisible={isOpen}>
+            <View style={{ backgroundColor:white, padding: 20 >
+                <Text>Contact Us</Text>
+                <Text>{content}</Text>
+                <Button title="Close" onPress={onRequestClose} >
+            </View>
+        </Modal>
+
+    <return>
+        <View>
+            <Lightbox images={images.map((image) > <source: { uri: image.src }, title: image.title>
+        </View>
+
+    <return>
+        <MapView>
+            style={styles.map}
+            initialRegion={region} >
+            <Marker coordinate={{ latitude: -33.918861, longitude: 18.4233 title="Botanical Building Blocks" />
+        </MapView>
+        <Animatable.View animation="fadeIn" duration={1000}>
+    <Text>Your content here</Text>
+</Animatable.View>
+
+  
+    </header>
+
+    <main>
+       <h1>Contact us </h1>
+        <p>Feel free to contact us if you need assistance</p>
+        <p>If you have any questions you can contact us with the contact information below</p>
+        <img src="_images/_contact_us_image.webp" alt="Contact_us "width="200">
+        <ul>
+        <li><strong>Physical Address:24 Botanical Road CapeTown</strong><br></li>
+        <li>Email Address<a href="malito:info@BotanicalBuildingBlocks.co.za">info@BotanicalBuildingBlocks.co.za</a></li>
+        <li>Contact Number<a href="tel:+1084582490">+1084582490</a></li>
+
+        <!-- the operational hours -->
+         <h1><color:#333>Operational Hours </h1></color:>
+        <p><strong>Mondays:</strong> 8 am - 5 pm</p>
+         <p><strong>Tuesdays:</strong> 8 am - 5 pm</p>
+          <p><strong>Wednesday:</strong> 8 am - 5 pm</p>
+           <p><strong>Thursdays:</strong> 8 am - 5 pm</p>
+            <p><strong>Fidays:</strong> 8 am - 5 pm</p>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d847632.102334314!2d17.996585531727554!3d-33.913780680601285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc500f8826eed7%3A0x687fe1fc2828aa87!2sCape%20Town!5e0!3m2!1sen!2sza!4v1756280737505!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </main>
+    <footer>
+          <nav>
+            <ul>
+                <li><a href="index_page.html">home</a></li>
+                <li><a href="about_us.html">about</a></li>
+                <li><a href="donation_page.html">donation</a></li>
+                <li><a href="project_and_gallery.html">project_and_gallery</a></li>
+                <li><a href="shop_page.html">shop</a></li>
+                <li><a href="volunteer.html">volunteer</a></li>
+                <li>contact us</li>
+            </ul>
+        </nav>
+    </footer>
+    
+</body>
+</html>

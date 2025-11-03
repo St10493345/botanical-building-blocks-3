@@ -3,24 +3,119 @@
     <head>
         <meta charset="UTF_8">
         <meta name="viewport"content="width=device-width,initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="styles.css">
+    <import React, { useState } from react>
+    <import { View, Text, TouchableOpacity, StyleSheet } from react-native>
+    <import { View, Text, TouchableOpacity, StyleSheet } from react-native>
+    <import { Modal, View, Text, Button, StyleSheet } from react-native>
+    <import { View, Image, StyleSheet, TouchableOpacity } from react-native>
+    <import Lightbox from react-native-lightbox-gallery>
+    <import { MapContainer, TileLayer, Marker } from react-leaflet>
+    <import leafletdistleaflet.css>
+    <import * as Animatable from react-native-animatable>
         <title>Donation page</title>
-        <link rel="stylesheet"href="styles.css">
+        
     </head>
     <body>
         <header>
-            <h1>Come and support our mission</h1>
+           
+             <h2>Botanical building blocks</h2>
+        <img src="_images/_logo_for_botanical_building_blocks.png" alt="botanical building blocks Logo " width="120">
+
+           <h1>Come and support our mission</h1>
+             <nav>
+             
+            <ul>
+                <li><a href="index_page.html">home</a></li>
+                <li><a href="about_us.html">about</a></li>
+                <li>donation_page</li>
+                <li><a href="project_and_gallery.html"> project_and_gallery</a></li>
+                <li><a href ="shop_page.html">shop</a></li>
+                <li><a href="volunteer.html">volunteer</a></li>
+                <li><a href="contact_us.html">contact_us</a></li>
+            </ul>
+            </nav>
+          
+
+    <return>
+        <View style={styles.accordionContainer}>
+            <TouchableOpacity onPress={() > setIsOpen(!isOpen)>
+                <Text style={styles.accordionTitle}>{title}</Text>
+            </TouchableOpacity>
+            <isOpen && >{children}</View>>
+        </View>
+       
+    <const [activeTab, setActiveTab] = useState(tabs[0].title);>
+
+    <return></return>
+        <View>
+            <View style=flexDirection: row >
+                <tabs.map(tab) >
+                    <TouchableOpacity key={tab.title} onPress={() > setActiveTab(tab.title)>
+                        <Text style={ margin: 10, fontWeight: activeTab = tab.title ? bold >
+                        </Text>
+                    </TouchableOpacity>
+            
+            <View>
+               <const Gallery images >
+    <return> 
+        <View>
+            <Lightbox images={images.map((image)> <source: { uri: image.src }, title: image.title>
+        </View>
+            <const CustomModal =  isOpen, onRequestClose, content  =>
+    <return>
+        <Modal isVisible={isOpen}>
+            <View style={ backgroundColor: white, padding: 20 >
+                <Text>Support Us</Text>
+                <Text>{content}</Text>
+                <Button title="Close" onPress={onRequestClose} >
+            </View>
+        </Modal>
+         <const MyMap = () >
+   <const region = {>
+        <latitude: -33.918861,>
+        <longitude: 18.4233,>
+        <latitudeDelta: 0.01,>
+        <longitudeDelta: 0.01,>
+    <return>
+        <MapView
+            style={styles.map}
+            initialRegion={region}
+        >
+            <Marker coordinate= latitude: -33.918861, longitude: 18.4233 ></Marker><title="Botanical Building Blocks>
+        </MapView>
+<Animatable.View animation="fadeIn" duration={1000}>
+    <Text>Your content here</Text>
+</Animatable.View>
+
+        </View>
         </header>
+     
+        
         <main>
             <!-- the h2 is for a heading for the donation page -->
-            <h2>Your contrubution matters to us</h2>
+           <h2>Your contrubution matters to us</h2>
             <p>Come and help us build a better ,stronger comunity through our amazing projects</p>
+            <img src="_images/_donaition_image.jpg" alt="donaition image"width="600">
                 <!-- The iframe is the link to my form for the donations -->
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFvgq3ASXC1mgUFWTPU9BXIXUKHU1DJpXatUFh2UDjt0SkXg/viewform?embedded=true" width="640" height="2045" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </form>
         </main>
         <footer>
+           
             <p>Thank you for your support and please help again in supporting us again</p>
+             <nav>
             
+            <ul>
+                <li><a href="index_page.html">home</a></li>
+                <li><a href="about_us.html">about_us</a></li>
+                <li>donation</li>
+                <li><a href="project_and_gallery.html"> project_and_gallery</a></li>
+                <li><a href ="shop_page.html">shop</a></li>
+                <li><a href="volunteer.html">volunteer</a></li>
+                <li><a href="contact_us.html">contact_us</a></li>
+            </ul>
+        </nav>
             
         </footer>
     </body>

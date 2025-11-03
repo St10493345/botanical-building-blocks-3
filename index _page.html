@@ -3,14 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botanical building blocks homepage</title>
-    <link rel="stylesheet"href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <import React, { useState } from react>
+    <import Modal from react-modal>
+    <import Lightbox from react-lightbox-component>
+     <import { MapContainer, TileLayer, Marker, Popup } from react-leaflet>
+     <import L from leaflet>
+     <import * as Animatable from react-native-animatable>
+     <title>Botanical building blocks</title>
+   
 </head>
 <body>
 <!-- the header is for thetop of the page where you want to start adding the information -->
     <header>
+        
+         <h2>"Botanical building blocks"</h2>
+         
+        <img src="_images/_logo_for_botanical_building_blocks.png" alt="botanical building blocks Logo " width="120">
+
         <h1>Welcome to botanical building blocks</h1>
+        
         <nav>
+            
             <ul>
                 <li><a href="#overview">overview</a></li>
                 <li><a href="#mission">mision_statement</a></li>
@@ -18,35 +32,86 @@
                 <li><a href="#target aduince">target_auidience</a></li>
             </ul>
         </nav>
+    <const [isOpen, setIsOpen] = useState(false);>
+
+    <return></return>
+        <div>
+            <h3 onClick={() => <setIsOpen(!isOpen) style={ cursor: pointer>
+                {Botanical building blocks}
+            </h3>
+            {isOpen && <div>{children}</div>}
+        </div>
+    <const [activeTab, setActiveTab] = useState(tabs[0].title);></const>
+    <return></return>
+        <div>
+            <div style={{ display: flex>
+                {tabs.map(tab) => 
+                    <button key={tab.title} onClick={() => <setActiveTab(tab.title)}>
+                    </button>
+            </div>
+        </div>
+  
+    <return >
+        <Modal isOpen={isOpen} onRequestClose={onRequestClose} contentLabel="Modal">
+            <h2>Modal Title</h2>
+            <div>{content}</div>
+            <button onClick={onRequestClose}>Close</button>
+        </Modal>
+
+
+    <return>
+        <Lightbox
+            images={images.map((image) > <({ src: image.src, title: image.title })>
+        />
+
+    <const position = [51.505, -0.09];>
+
+    <return>
+        <MapContainer center={position} zoom={13} style={{ height: 400px, width: 100% >
+            <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Marker position={position} icon={new L.Icon.Default()>
+                <Popup>
+                    A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+        </MapContainer>
+
+        <Animatable.View animation="fadeIn" duration={1000}>
+    <Text>Your content here</Text>
+</Animatable.View>
+
 
     </header>
-
     <main>
         <!-- this section if where ii added more information -->
         <section id ="overview">
-            <h2>Organizations overview</h2>
-            <h3>Botanical building blocks</h3>
+          <h2>Organizations overview</h2>
+           <h3>Botanical building blocks</h3>
             <p>Botanical building blocks was founded in 2020 by a young woman that has a passion for environmental and the community activists that is based in Cape Town, South Africa. She started an organisation that also has a passion for the environment.
                  The organisation aims to address both environmental sustainability and social upliftment by involving disadvantaged communities in the upcycling of waste materials into handcrafted artificial flowers used for decor, events, and educational purposes 
                 and so much more these buildable flowers you can also gift to a friend or a loved one. </p>
         </section>
 
         <section id="mission">
-            <h2>mision_statement</h2>
+           <h3>Botanical building blocks</h3>
+           <h2>mision_statement</h2></
             <p>To inspire creativity for any person that loves to build and create small uplifting things, it also helps to spread environmental awareness, It helps community development through 
                  the sustainable creation of buildable flowers from recyclable materials that bringshappiness to creative people and helps the environment .The mission that  Botanical
                    building blocks has is to take care of the environment and to create buildable flowers from waste materials found in the environment.</p>
         </section>
         
         <section id="vision">
-            <h2>visoin_statment</h2>
+           <h2>visoin_statment</h2>
             <p>A greener more natural and a more inclusive future where creativity blooms through every 
                 person, creativity also blooms from sustainability and community empowerment thorough every person. This organization is also in business to help and take care of the environment.
                  And to create something beautiful from waste materials and from that waste materials buildable flowers will bloom.</p>
         </section>
 
         <section id="target-audience">
-            <h2>target_auidience</h2>
+          <h2>target_auidience</h2>
             <ul>
                 <li>Environmental entusiasts</li>
                 <li>Event planners looking for eco friendly decor</li>
@@ -55,24 +120,26 @@
                 <li>Volunteers and craft hobbyists</li>
             </ul>
         </section>
+        <img src="_images/_sponser_image.jpg" alt="Sponsers for organization" width="120">
+        <img src="_images/_event_Planner_image.jpg" alt="Event planner" width="120">
+
     </main>
 
      <footer>
+       
           <nav>
+        
             <ul>
                 <li>index</li>
-                <li><a href="about us.html">about us</a></li>
-                <li><a href="donation_page.html">donation_page</a></li>
-                <li><a href="Project_and_gallery.html">gallery</a></LI>
+                <li><a href="about_us.html">about_us</a></li>
+                <li><a href="donation.html">donation</a></li>
+                <li><a href="project_and_gallery.html">project_and_gallery</a></LI>
                 <li><a href ="contact_us.html">contact_us</a></li>
-                <li><a href ="shop.html">shop</a></li>
+                <li><a href ="shop_page.html">shop</a></li>
                 <li><a href ="volunteer.html">volunteer</a></li>
 
             </ul>
         </nav>
-
-
-    </footer>
     
 </body>
 </html>

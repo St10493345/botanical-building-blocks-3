@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="widht=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <import React, { useState } from react>
+        <import { View, Text, TouchableOpacity, StyleSheet } from react-native>
+       <import { View, Text, TouchableOpacity, StyleSheet } from react-native>
+        <import { Modal, View, Text, Button, StyleSheet } from react-native>
+        <import { View, Image, StyleSheet, TouchableOpacity } from react-native>
+        <import Lightbox from react-native-lightbox-gallery>
+        <import { MapContainer, TileLayer, Marker } from react-leaflet>
+        <import leafletdistleaflet.css>
+         <import * as Animatable from react-native-animatable>
+        <title>projects and gallery</title>
+        
+    </head>
+    <body>
+        <header>
+            <h1>Our organizations projects</h1>
+              <nav>
+                
+            <ul>
+                <li><a href="index_page.html">home</a></li>
+                <li><a href="about_us.html">about us</a></li>
+                <li><a href="donation.html">donation_page</a></li>
+                <li>project_and_gallery</li>
+                <li><a href ="contact_us.html">contact_us</a></li>
+                <li><a href ="shop_page.html">shop</a></li>
+                <li><a href ="volunteer.html">volunteer</a></li>
+
+            </ul>
+        </nav>
+    <const [isOpen, setIsOpen] = useState(false);></const>
+
+    <return>
+        <View style={styles.accordion}>
+            <TouchableOpacity onPress={() > setIsOpen(!isOpen)>
+                <Text style={styles.title}>{title}</Text>
+            </TouchableOpacity>
+            {isOpen && <View style={styles.content}>{children}</View>}
+        </View>
+    <const [activeTab, setActiveTab] = useState(tabs[0].title);>
+
+    <return>
+        <View>
+            <View style={styles.tabContainer}>
+                <tabs.maptab > 
+                    <TouchableOpacity
+                        key={tab.title}
+                        onPress=() > setActiveTab(tab.title)
+                        <Text>{tab.title}</Text>
+                    </TouchableOpacity>
+
+            </View>
+            <View style={styles.content}>
+            </View>
+            <const CustomModal = ( visible, onClose ) =>
+    <return>
+        <Modal transparent={true} visible={visible}>
+            <View style={styles.modalOverlay}>
+                <View style={styles.modalContent}>
+                    <Text>Thank you for your interest!</Text>
+                    <Button title="Close" onPress={onClose} />
+                </View>
+            </View>
+        </Modal>
+        <const Gallery = images >
+    <return>
+        <View style={styles.container}>
+            <Lightbox>
+                    <TouchableOpacity key={index}>
+                        <Image source= uri: image  style={styles.image}>
+                    </TouchableOpacity>
+
+            </Lightbox>
+        </View>
+        <const MyMap = () >
+    <return>
+        <View style={styles.mapContainer}>
+            <MapContainer center={51.505, -0.09] zoom={13} style={styles.map}>
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                />
+                <Marker position=[51.505, -0.09] />
+            </MapContainer>
+            <Animatable.View animation="fadeIn" duration={1000}>
+    <Text>Your content here</Text>
+</Animatable.View>
+
+        </View>
+        <main>
+            <!-- this is where i show the current projects -->
+           <h2> <color:#333>Our organizations current projects</h2></color:>
+            <ul>
+                <li>Project 1:You get 3 diffrent kits and you need to create your oun dream floe=wer kit,it is called the dreamers flower kit for R 320.20</li>
+                <li>Project 2:You get 2 kits of your choice for example roses and cherry blossems and creat a beautiful flower kit that can be crestive with a buildable vase for the flowers for R 299.99</li>
+                <li>Project3:You get a bunch flower kit  and have to create a habitat for these flowers depending wich one you chose habitat bricks will be included for 180.65</li>
+            </ul>
+            <!-- this part is where i show past projects -->
+         <h2><color:#333>Our Gallery</h2></color:>
+            <div class="gallery">
+                <image src="_images/botanical_ flower_ idea.webp"alt="project image for assorted kits ">
+               </image>
+               </div>
+        </main>
+        <footer>
+            <background-color:#f8f8f8>
+            <padding:1em;>
+            <p>Come and join our organization and help to make a big diffrence in our comunity!</p>
+             <img src="_images/_botanical_kit.jpeg"alt="project image for a botanical kit" width="150">
+            <h3>if you love flowers and like wgat you see you know where to get your very own flowers to build</h3>
+             <p>Vissit our shop and go get you flowers to build and be creative</p>
+             <h3>Be a creative one</h3>
+             <img src="_images/_be_creative_image.webp" alt="Be creative image" width="160">
+            <h3>Visit our shop</h3>
+             <img src="_images/_visit_our_shop_image.jpg" alt="visit us now" width="150">
+
+              <nav>
+            
+            <ul>
+                <li><a href="index_page.html">home</a></li>
+                <li><a href="about_us.html">about us</a></li>
+                <li><a href="donation.html">donation_page</a></li>
+                <li>project_and_gallery</li>
+                <li><a href ="contact_us.html">contact_us</a></li>
+                <li><a href ="shop_page.html">shop</a></li>
+                <li><a href ="volunteer.html">volunteer</a></li>
+
+            </ul>
+        </nav>
+    </body>
+</html>
+
+
+

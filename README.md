@@ -58,4 +58,13 @@ You would want to see information about how to get involved in the organization 
 8. Website launch and monitoring.
 
 
+## 1Part 3 poe 
+I took out the html styles  i had in befor in my webpage and added  the correct css styling.
+I added a css file for my styles.
+I implemented  the interactive elements that i was tasked with adding .
+I also added interactive maps into my code and i also added animation .
+i also added a lightbox into my code that makes my images larger when pressed.
+I also added a app .js page for all my code and i also added more styles.
+
+
 

@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(28, 54, 23);
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: rgb(18, 104, 78);
+    text-align: left;
+}
+
+Accordion Styles
+const styles = StyleSheet.create({
+    accordion: { marginVertical: 10 },
+    title: { fontSize: 18, fontWeight: 'bold' },
+    content: { padding: 10 },
+});
+
+Tab styles 
+const styles = StyleSheet.create({
+    tabContainer: { flexDirection: 'row', justifyContent: 'space-around' },
+    tab: { padding: 10 },
+    activeTab: { backgroundColor: '#ddd' },
+    content: { padding: 20 },
+
+    Modal styles
+    const styles = StyleSheet.create({
+    modalOverlay: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)' },
+    modalContent: { width: 300, padding: 20, backgroundColor: 'white', borderRadius: 10 },
+
+    Lightbox styles
+    const styles = StyleSheet.create({
+    container: { flexDirection: 'row', flexWrap: 'wrap' },
+    image: { width: '48%', height: 150, margin: '1%' },
+});
+
+Map styles
+<const styles = StyleSheet.create({></const>
+    <mapContainer: { height: 300 },></mapContainer:>
+    <map: { height: '100%', width: '100%' },></map:>
+});

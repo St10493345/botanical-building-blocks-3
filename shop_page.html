@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"content="width=device-width, initialscale =1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <import { Modal, View, Text, Button, StyleSheet } from react-native>
+         <import { Modal, View, Text, Button, StyleSheet } from react-native>
+        <import { View, Image, StyleSheet, TouchableOpacity } from react-native>
+        <import Lightbox from react-native-lightbox-gallery>
+        <import { MapContainer, TileLayer, Marker } from react-leaflet>
+         <import leafletdistleaflet.css>
+        <import * as Animatable from react-native-animatable>
+         <title>Shop_page</title>
+ 
+    </head>
+    <body>
+
+        <header>
+             <h2>"Botanical building blocks"</h2>
+        <img src="_images/_logo_for_botanical_building_blocks.png" alt="botanical building blocks Logo " width="120">
+
+           <h1>Welcome to our Botanical shop</h1>
+             <nav>
+            <ul>
+                <li><a href="index_page.html">home</a></li>
+                <li><a href="about_us.html">about</a></li>
+                <li><a href="donation.html">donation</a></li>
+                <li><a href="project_and_gallery.html">project_and_gallery</a></li>
+                <li>shop</li>
+                <li><a href="volunteer.html">volunteer</a></li>
+                <li><a href="contact_us.html">ccontact_us</a></li>
+            </ul>
+        </nav>
+    <const [isOpen, setIsOpen] = useState(false);></const>
+
+    <return>
+        <View style={styles.accordion}>
+            <TouchableOpacity onPress={()> setIsOpen(!isOpen)>
+                <Text style={styles.title}>{title}</Text>
+            </TouchableOpacity>
+            <isOpen && style={styles.content}>{children}>
+        </View>
+    <const [activeTab, setActiveTab] = useState(tabs[0].title);>
+
+    <return></return>
+        <View>
+            <View style={styles.tabContainer}>
+                <tabs.map(tab >
+                    <TouchableOpacity
+                        key={tab.title}
+                        onPress=() > setActiveTab(tab.title)
+                        <Text>{tab.title}</Text>
+                    </TouchableOpacity>
+            </View>
+            <View style={styles.content}>
+            </View>
+            <const CustomModal = ( visible, onClose) >
+    <return>
+        <Modal transparent={true} visible={visible}>
+            <View style={styles.modalOverlay}>
+                <View style={styles.modalContent}>
+                    <Text>Thank you for your purchase!</Text>
+                    <Button title="Close" onPress={onClose} >
+                </View>
+            </View>
+        </Modal>
+    <return>
+        <View style={styles.container}>
+            <Lightbox>
+                {images.map (image, index) => 
+                    <TouchableOpacity key={index}>
+                        <Image source={{ uri: image }style={styles.image} />
+                    </TouchableOpacity>
+            </Lightbox>
+        </View>
+        
+        <View style={styles.mapContainer}>
+            <MapContainer center={[51.505, -0.09] zoom={13} style={styles.map}>
+                <TileLayer
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy;a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                />
+                <Marker position={[51.505, -0.09] />
+            </MapContainer>
+
+            <Animatable.View animation="fadeIn" duration={1000}>
+    <Text>Your content here</Text>
+</Animatable.View>
+
+        </View>
+        </View>
+
+
+
+        
+        </header>
+        <main>
+            <h2>A little to kniw abour our shop!</h2>
+            <p>Our Shop sells the product that our organization made out of wast material and created into a woderful piece that you can use for many reasons and diffrent project ,this shop will give you a chance to be a creative person with these builable flowers</p>
+           <h2>Products we sell</h2>
+            <ul>
+                <!-- here i show the list of products and their pricing -->
+                <li>Botanical roses -R176.73</li>
+                <li><img src="_images/botanical_ flower_ idea.webp"alt="Botanical lily"width="100"height="100"> Botanical lilies- R199.45</li>
+                <li>botanical daisies-R229.74</li>
+                <li><img src="_images/botanical_ buildable_ flowers.webp"alt="asorted bunch"width="100" height="100">botanical bunch-R335.45</li>
+                <li><img src="_images/botanical_ flower_ idea.webp"alt="assorted flowers"width="100" height="100"> assorted bunch - R385.55</li>
+            </ul>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScGPV1bQAZWrbPhFWBPfERM379F4klaC7WRXxwb9uN20odhqA/viewform?embedded=true" width="640" height="2425" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <button onclick="alert('Thank you for the wondrful purchase!')">Buy Now</button>
+        </main>
+        <footer>
+        
+            <p>Support us through every purchase you make!</p>
+             <nav>
+            <ul>
+                <li><a href="index_page.html">home</a></li>
+                <li><a href="about_us.html">about</a></li>
+                <li><a href="donation.html">donation</a></li>
+                <li><a href="project_and_gallery.html">project_and_gallery</a></li>
+                <li>shop</li>
+                <li><a href="volunteer.html">volunteer</a></li>
+                <li><a href="contact_us.html">contact_us</a></li>
+            </ul>
+             </nav>
+
+        </footer>
+    </body>
+</html>
